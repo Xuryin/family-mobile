@@ -1,0 +1,83 @@
+/* 禁止选中文本 */
+.usn{
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -o-user-select:none;
+    user-select:none;
+}
+
+/* 浮动 */
+.fl { float: left; }
+.fr { float: right; }
+.cf { zoom: 1; }
+.cf:after {
+    content:".";
+    display:block;
+    clear:both;
+    visibility:hidden;
+    height:0;
+    overflow:hidden;
+}
+
+/* 强制不换行 */
+.wn {
+    word-wrap:normal;
+    white-space:nowrap;
+}
+
+/* 强制换行 */
+.wb {
+    white-space:normal;
+    word-wrap:break-word;
+    word-break:break-all;
+}
+
+.wes { /* 多出部分用省略号表示 , 用于一行 */
+    overflow:hidden;
+    word-wrap:normal;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+}
+.wes-2 { /* 适用于webkit内核和移动端 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+} 
+.wes-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.wes-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+    overflow: hidden;
+}
+
+/* 垂直居中 */
+.df-c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tb-c {
+    text-align:center;
+    display:table-cell;
+    vertical-align:middle;
+}
+.ts-c {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.ts-mc {
+    position: absolute;
+    left: 0;right: 0;
+    bottom: 0; top: 0;
+    margin: auto;
+}
