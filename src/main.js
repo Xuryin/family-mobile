@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import store from './vuex/store';
+import store from './store'
 import promise from 'es6-promise';
 import YDUI from 'vue-ydui';
 import 'vue-ydui/dist/ydui.px.css';
