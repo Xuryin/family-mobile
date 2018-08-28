@@ -8,6 +8,7 @@ const mutations = {
     state.age = age
   },
   [types.SET_TITLE] (state, title) {
+      console.log(title)
     state.title = title
   }
 }

@@ -1,7 +1,8 @@
 <template>
     <div>
         <div class="header_page">
-
+            <i class="icon iconfont icon-fanhui"></i>
+            <span >{{pageTitle}}</span>
         </div>
     </div>
 </template>
@@ -11,12 +12,19 @@
     export default {
         name: "Header",
         computed: {
-            ...mapGetters({})
+            ...mapGetters({
+                pageTitle: 'title'
+            })
         },
         data () {
             return {
-
             }
+        },
+        methods: {
+
+        },
+        mounted () {
+
         }
     }
 </script>

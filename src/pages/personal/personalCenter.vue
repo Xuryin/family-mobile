@@ -1,21 +1,22 @@
 <template>
-    <div id="app">
+    <div>
+        <Header/>
         <router-view />
+        <Footer/>
     </div>
 </template>
 
 <script>
     import Header from '@/components/Header.vue'
     import Footer from '@/components/Footer.vue'
-export default {
-    name: 'App',
-    components: {
-        Header, Footer
+    export default {
+        name: 'App',
+        components: {
+            Header, Footer
+        }
     }
-}
 </script>
 
-<style>
-@import "../static/css/reset.css";
-@import "../static/css/public.css";
+<style scoped>
+
 </style>
