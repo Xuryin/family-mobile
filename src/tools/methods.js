@@ -1,7 +1,6 @@
 // 常用方法
 import {bus} from './bus';
 import {SAVE_LASTING} from '../api/ajax';
-import {Toast, Loading} from 'vue-ydui/dist/lib.rem/dialog';
 
 // 获取localStorage
 export const getItem = (key) => {
@@ -43,37 +42,8 @@ export const checkRealName = () => {
     return flag
 }
 
-// Toast
-export const msgToast = (msg) => {
-    let duration
-    if (msg.length > 15) {
-        duration = 3000
-    } else if (msg.length < 15 && msg.length > 4) {
-        duration = parseInt(msg.length) * 200
-    } else {
-        duration = 800
-    }
-    Toast({
-        mes: msg,
-        timeout: duration
-    })
-}
 
-// loading
-export const msgLoadingOpen = (msg) => {
-    Loading.open(msg)
-    bus.$emit('open_dialog')
-    setTimeout(function() {
-        msgLoadingClose()
-        bus.$emit('close_dialog')
-    }, 10000)
-}
 
-// loading close
-export const msgLoadingClose = (msg) => {
-    Loading.close()
-    bus.$emit('close_dialog')
-}
 
 export function fixed (num, n) {
     /*

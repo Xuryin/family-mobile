@@ -17,7 +17,7 @@ export const logout = () => {
 
 // 登陆api
 export const requestRegister = params => {
-    return initAxios().get('/register', {params: params}).then(res => res.data).catch(errorHandle)
+    return initAxios().post('/register', params).then(res => res.data).catch(errorHandle)
 }
 
 export const getBackPassword = params => {

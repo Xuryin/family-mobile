@@ -10,22 +10,22 @@ let is_token_locked = false;
 
 // axios初始化
 export default function initAxios() {
-    let tokenInfo = getItem(TOKEN_OBJ_ID)
-    let time = new Date().getTime()
-    let token = fetchToken()
-
-    // 如果token被锁
-    if (token && is_token_locked) {
-        return false
-    }
-
-    let authHeader = 'Bearer ' + token
+    // let tokenInfo = getItem(TOKEN_OBJ_ID)
+    // let time = new Date().getTime()
+    // let token = fetchToken()
+    //
+    // // 如果token被锁
+    // if (token && is_token_locked) {
+    //     return false
+    // }
+    //
+    // let authHeader = 'Bearer ' + token
     let init = axios.create({
         baseURL: host,
-        headers: {
-            Authorization: authHeader,
-            'X-Requested-With': 'XMLHttpRequest'
-        },
+        // headers: {
+        //     Authorization: authHeader,
+        //     'X-Requested-With': 'XMLHttpRequest'
+        // },
         timeout: 10000,
         validateStatus: function (status) {
             return status >= 200 && status < 300
