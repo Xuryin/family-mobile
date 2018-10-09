@@ -1,14 +1,15 @@
 <template>
     <div>
         <div class="header_page">
-            <i class="icon iconfont icon-fanhui"></i>
-            <span >{{pageTitle}}</span>
+            <i class="icon iconfont icon-fanhui" @click="back"></i>
+            <span>{{pageTitle}}</span>
         </div>
     </div>
 </template>
 
 <script>
     import {mapGetters} from 'vuex'
+
     export default {
         name: "Header",
         computed: {
@@ -16,19 +17,20 @@
                 pageTitle: 'title'
             })
         },
-        data () {
-            return {
-            }
+        data() {
+            return {}
         },
         methods: {
-
+            back() {
+                this.$router.go(-1)
+            }
         },
-        mounted () {
+        mounted() {
 
         }
     }
 </script>
 
 <style scoped lang="less">
-@import "../../static/less/header";
+    @import "../../static/less/header";
 </style>

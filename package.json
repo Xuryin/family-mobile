@@ -13,11 +13,10 @@
     "axios": "^0.18.0",
     "es6-promise": "^4.2.4",
     "jsencrypt": "^3.0.0-rc.1",
+    "vant": "^1.3.4",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
-    "vue-ydui": "^1.2.2",
-    "vuex": "^3.0.1",
-    "ydui-district": "^1.1.0"
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",

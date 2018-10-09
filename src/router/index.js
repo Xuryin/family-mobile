@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/login/login.vue'
+import register from '@/pages/login/register.vue'
 import PersonalCenter from '@/pages/personal/personalCenter.vue'
 import Shop from '@/pages/shop/shop.vue'
 import Cart from '@/pages/cart/cart.vue'
@@ -34,6 +35,11 @@ export default new Router({
             path: '/login',
             name: 'login',
             component: Login
+        },
+        {
+            path: '/register',
+            name: 'register',
+            component: register
         }
     ]
 })
