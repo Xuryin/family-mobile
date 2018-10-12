@@ -73,17 +73,6 @@
             }),
             submit() {
                 // this.submitRegister = true
-                //   axios.post('http://localhost:5000/register',{
-                //       params: this.userData
-                //   })
-                //       .then((response) => {
-                //           console.log(response);
-                //       }).then(() => {
-                //       this.submitRegister = false
-                //       }).catch((error) => {
-                //           console.log(error);
-                //       });
-                // console.log(this.userData)
                requestRegister(this.userData)
                     .then((response) => {
                         console.log(response);
