@@ -1,9 +1,11 @@
 <template>
     <div>
-        <div class="header_page">
-            <i class="icon iconfont icon-fanhui" @click="back"></i>
-            <span>{{pageTitle}}</span>
-        </div>
+        <van-nav-bar
+            :title="pageTitle"
+            left-text="返回"
+            left-arrow
+            @click-left="back"
+        />
     </div>
 </template>
 

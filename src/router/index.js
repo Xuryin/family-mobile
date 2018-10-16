@@ -4,6 +4,7 @@ import Login from '@/pages/login/login.vue'
 import register from '@/pages/login/register.vue'
 import PersonalCenter from '@/pages/personal/personalCenter.vue'
 import Shop from '@/pages/shop/shop.vue'
+import Details from '@/pages/shop/details.vue'
 import Cart from '@/pages/cart/cart.vue'
 
 Vue.use(Router)
@@ -25,6 +26,11 @@ export default new Router({
             path: '/shop',
             name: 'shop',
             component: Shop
+        },
+        {
+            path: '/details',
+            name: 'details',
+            component: Details
         },
         {
             path: '/cart',

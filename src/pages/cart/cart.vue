@@ -1,17 +1,30 @@
 <template>
     <div>
-        <Header/>
-        <Footer/>
+      this is cart
+        <Footer></Footer>
     </div>
 </template>
 
 <script>
-    import Header from '@/components/Header.vue'
+    import {mapActions, mapMutations} from 'vuex'
     import Footer from '@/components/Footer.vue'
     export default {
-        name: "cart",
+        name: 'cart',
         components: {
-            Header, Footer
+            Footer
+        },
+        data () {
+            return {
+                title: '购物车'
+            }
+        },
+        methods: {
+            ...mapMutations({
+                setTitle: 'SET_TITLE'
+            })
+        },
+        mounted () {
+            this.setTitle(this.title)
         }
     }
 </script>

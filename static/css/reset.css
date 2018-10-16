@@ -7,6 +7,7 @@ html {
   /* 2 */
   -webkit-text-size-adjust: 100%;
   /* 2 */
+    background-color: #F5F5F5;
 }
 
 body {
@@ -340,4 +341,30 @@ input {
 
 input[type="text"] {
   -webkit-appearance: none;
+}
+
+
+/*vant*/
+
+.van-field__body {
+    height: 100%;
+}
+
+.van-nav-bar {
+    background-color: #EA3939;
+    color: #ffffff;
+}
+
+.van-nav-bar__title {
+    font-size: 0.44rem;
+    letter-spacing: 0.05rem;
+    font-weight: bold;
+}
+
+.van-nav-bar .van-icon {
+    color: #ffffff;
+}
+
+.van-nav-bar__text {
+    color: #ffffff;
 }

@@ -1,6 +1,5 @@
 <template>
     <div class="loginPage">
-        <Header/>
         <div class="loginForm">
             <van-cell-group>
                 <van-field
@@ -47,15 +46,11 @@
 
 <script>
     import {mapActions, mapMutations} from 'vuex'
-    import Header from '@/components/Header.vue'
     import axios from 'axios'
     import {requestRegister} from "../../api/personal";
 
     export default {
         name: "register",
-        components: {
-            Header
-        },
         data() {
             return {
                 title: '注册',
