@@ -40,6 +40,7 @@
 
 <script>
     import {mapActions, mapMutations} from 'vuex'
+    import {requestLogin} from "../../api/personal";
 
     export default {
         name: "login",
@@ -59,6 +60,12 @@
             }),
             submit() {
                 this.submitLogin = true
+                requestLogin(this.userData)
+                    .then((res) => {
+                        console.log(res)
+                    }).catch(err => {
+                        console.log(err)
+                })
             }
         },
         mounted() {

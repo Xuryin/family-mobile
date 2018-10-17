@@ -37,19 +37,49 @@
 /*商品详情页*/
 .goods_details_info {
     background-color: #ffffff;
+    padding: 0.2rem 0 0 0.4rem;
+    p {
+        line-height: 0.6rem;
+    }
+    p:nth-child(1) {
+        font-size: 0.4rem;
+    }
+    p:nth-child(2) {
+        font-size: 0.32rem;
+    }
+    p:nth-child(3) {
+        line-height: 1rem;
+        font-size: 0.45rem;
+        color: @red;
+        font-weight: bold;
+        span {
+            font-size: 0.32rem;
+            color: #666666;
+            text-decoration: line-through;
+        }
+    }
 }
 
 .goods_details_vip {
-    background-color: #FFF0F5;
+    background-color: #FFFAFA;
     margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
     li {
         height: 0.8rem;
         display: flex;
         align-items: center;
-        span:nth-child(1) {
-            border: 0.01rem solid #FF3E96;
+        justify-content: flex-start;
+        padding-left: 0.4rem;
+        border-bottom: 0.02rem solid #FFF0F5;
+        p:nth-child(1) {
+            color: #FF3E96;
+            font-size: 0.3rem;
+            border: 0.02rem solid #FF3E96;
             border-radius: 3px;
-            padding: 0.1rem 0.2rem;
+            padding:  0.05rem 0.1rem;
+        }
+        p:nth-child(2) {
+            margin-left: 0.4rem;
         }
     }
 }

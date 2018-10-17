@@ -15,7 +15,7 @@ export const logout = () => {
     return initAxios().post('/logout').then(res => res.data).catch(errorHandle)
 }
 
-// 登陆api
+// 注册api
 export const requestRegister = params => {
     return initAxios().post('/register', params).then(res => res.data).catch(errorHandle)
 }

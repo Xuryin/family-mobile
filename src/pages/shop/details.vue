@@ -19,16 +19,30 @@
 
         <ul class="goods_details_vip">
             <li>
-                <span>会员特权</span>
-                <span>激活后半价</span>
+                <p>会员特权</p>
+                <p>激活后半价</p>
+            </li>
+            <li>
+                <p>包邮政策</p>
+                <p>包邮</p>
             </li>
         </ul>
+
+
+        <van-tabs v-model="active" sticky>
+            <van-tab v-for="index in indexTitle" :title="index.name" :key="index.type">
+                <goodInfo :data="goodInformation"></goodInfo>
+            </van-tab>
+        </van-tabs>
+
+
     </div>
 </template>
 
 <script>
     import {mapActions, mapMutations} from 'vuex'
     import {getGoodsDetails} from "../../api/personal";
+    import goodInfo from '@/components/goodInfo'
 
     export default {
         name: "details",
@@ -37,8 +51,23 @@
                 title: '商品详情',
                 id: '',
                 goodData: [],
-                images: []
+                images: [],
+                active: '',
+                indexTitle: [
+                    {
+                        type: 1,
+                        name: '详情'
+                    },
+                    {
+                        type: 2,
+                        name: '评价'
+                    },
+                ],
+                goodInformation: ""
             }
+        },
+        components: {
+            goodInfo
         },
         methods: {
             ...mapMutations({
